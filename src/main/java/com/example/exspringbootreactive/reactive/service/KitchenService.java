@@ -1,5 +1,6 @@
-package com.example.exspringbootreactive.reactive;
+package com.example.exspringbootreactive.reactive.service;
 
+import com.example.exspringbootreactive.reactive.domain.Dish;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 
@@ -19,7 +20,7 @@ public class KitchenService {
 
     private Random picker = new Random();
 
-    Flux<Dish> getDishes() {
+    public Flux<Dish> getDishes() {
         return Flux.<Dish> generate(sink -> sink.next(randomDish()))
                 .delayElements(Duration.ofMillis(250));
     }

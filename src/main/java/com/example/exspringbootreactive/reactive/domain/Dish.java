@@ -1,4 +1,4 @@
-package com.example.exspringbootreactive.reactive;
+package com.example.exspringbootreactive.reactive.domain;
 
 public class Dish {
 
@@ -12,7 +12,7 @@ public class Dish {
         return deliveredDish;
     }
 
-    Dish(String description) {
+    public Dish(String description) {
         this.description = description;
     }
 
